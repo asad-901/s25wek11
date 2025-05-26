@@ -1,0 +1,18 @@
+name: pr-validate-wf
+on: 
+   pull_request:
+     types:
+       - opened
+       - synchronize
+   push:
+      branches:
+        - develop
+
+jobs:
+    pr-validate-job:
+      runs-on: ubuntu-latest
+      steps:
+        - name: welcome steps
+          run: echo "Welcome to actions"
+        - name: second steps
+          run: echo "Welcome Again"  
